@@ -1,0 +1,19 @@
+{
+  "name": "devsu-interview",
+  "version": "1.0.0",
+  "description": "interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gersom/devsu-interview.git"
+  },
+  "author": "Gersom Alaja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gersom/devsu-interview/issues"
+  },
+  "homepage": "https://github.com/Gersom/devsu-interview#readme"
+}
