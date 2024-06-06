@@ -31,8 +31,12 @@ const schema = {
 const ItemsScheme = new mongoose.Schema(schema, config)
 
 // add static methods (functions) to model
-ItemsScheme.static('findAllData', (pp) => {
-  return ItemsModel.find({})
+ItemsScheme.static('findAllData', async (pp) => {
+  const itemsDefault = await ItemsModel.find({})
+  return itemsDefault.map(obj => {
+    const { _id, ...rest } = obj._doc;
+    return { id: _id, ...rest };
+  });
 })
 ItemsScheme.static('findOneData', (_id) => {
   return ItemsModel.findById(_id)
