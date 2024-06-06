@@ -6,7 +6,7 @@ Esta aplicación web permite a los usuarios ofertar productos con las funcionali
 
 **Repositorios:**
 
-* **Código fuente:** [https://github.com/devsu](https://github.com/devsu)
+* **Código fuente:** [Repositorio Github](https://github.com/Gersom/devsu-interview)
 
 **Estructura del proyecto:**
 
@@ -33,7 +33,7 @@ El proyecto se compone de dos carpetas principales:
 1. **Clonar el repositorio:**
 
 ```bash
-git clone https://github.com/devsu
+git clone https://github.com/Gersom/devsu-interview
 ```
 
 2. **Instalar dependencias:**

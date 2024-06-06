@@ -1,19 +1,12 @@
 import { View, Text, StyleSheet, FlatList, Image, Pressable } from 'react-native';
-import useItems from '../hooks/useItems';
 
-const ItemList = ({ textSearch= '', openInfo }) => {
-
-  const filterByName = () => {
-    const search = textSearch.toLowerCase();
-    return useItems().filter(item => item.name.toLowerCase().includes(search));
-    }
-  const dataitems = filterByName()
+const ItemList = ({ openInfo, dataItems=[] }) => {
 
   return (
     <View style={styles.container}>
       
       <FlatList 
-        data={dataitems}
+        data={dataItems}
         ItemSeparatorComponent={() => <View style={styles.itemSeparator} />}
         renderItem={({ item }) => (
           <Pressable key={item.id} style={styles.item} onPress={() => openInfo(item)}>
