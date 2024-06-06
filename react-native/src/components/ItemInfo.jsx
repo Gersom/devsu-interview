@@ -1,24 +1,25 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet, Image } from 'react-native';
+import formatDate from '../utils/formatDate'
 
-const ItemInfo = ({ onClose }) => {
+const ItemInfo = ({ item, onClose }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.id}>
-        ID: 123455</Text>
+        {item.name}</Text>
       <Text style={styles.info}>
         Información Extra</Text>
       <View style={[styles.textContent, styles.textContentRow]}>
         <Text style={styles.textTitle}>
-          Nombre:</Text>
+          ID:</Text>
         <Text style={styles.text}>
-          Depósito de ahorro</Text>
+          {item.id}</Text>
       </View>
       <View style={styles.textContent}>
         <Text style={styles.textTitle}>
           Descripción:</Text>
         <Text style={styles.text}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut non possimus nostrum, quibusdam saepe harum a magni ex natus vero atque, nobis et ipsam impedit error veritatis reprehenderit repellat. Quibusdam.</Text>
+          {item.description}</Text>
       </View>
       <View style={styles.textContent}>
         <Text style={styles.textTitle}>
@@ -33,15 +34,15 @@ const ItemInfo = ({ onClose }) => {
         <Text style={styles.textTitle}>
           Fecha liberación:</Text>
         <Text style={styles.text}>
-          12/06/2030</Text>
+          {formatDate(item.dateRelease)}</Text>
       </View>
-      <View style={[styles.textContent, styles.textContentRow]}>
+      <View style={[styles.textContent, styles.textContentRow, styles.mb]}>
         <Text style={styles.textTitle}>
           Fecha revisión:</Text>
         <Text style={styles.text}>
-          12/06/2030</Text>
+          {formatDate(item.dateRevision)}</Text>
       </View>
-      <Button title="Cerrar" onPress={onClose} />
+      <Button title="Cerrar" onPress={onClose}/>
     </View>
   );
 };
@@ -91,6 +92,9 @@ const styles = StyleSheet.create({
   text: {
     color: '#fff',
     fontSize: 16,
+  },
+  mb: {
+    marginBottom: 20
   }
 });
 

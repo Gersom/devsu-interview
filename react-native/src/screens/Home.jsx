@@ -6,16 +6,22 @@ import MyModal from './../components/Modal'
 import ItemInfo from './../components/ItemInfo'
 
 export default function Home() {
-  const [modalVisible, setModalVisible] = useState(false);
+  const [modalInfo, setModalInfo] = useState(false);
+  const [itemCurrent, setItemCurrent] = useState({});
+
+  const openInfo = (obj) => {
+    setItemCurrent(obj)
+    setModalInfo(true)
+  }
 
   return (
     <View style={styles.container}>
       <Header />
       <View style={styles.separator}/>
-      <ItemList setModalVisible={setModalVisible} />
+      <ItemList openInfo={openInfo} />
 
-      <MyModal visible={modalVisible}>
-        <ItemInfo onClose={() => setModalVisible(false)} />
+      <MyModal visible={modalInfo}>
+        <ItemInfo item={itemCurrent} onClose={() => setModalInfo(false)} />
       </MyModal>
     </View>
   );

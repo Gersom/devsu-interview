@@ -1,40 +1,18 @@
-import { View, Text, StyleSheet, FlatList, Image, Button } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Image, Pressable } from 'react-native';
+import useItems from '../hooks/useItems';
 
+const ItemList = ({ openInfo }) => {
 
-export default function ItemList({ setModalVisible }) {
+  const dataitems = useItems()
 
-  
-  const dataAll = [
-    {
-      id: '0001',
-      name: 'Depósito de ahorro'
-      },
-    {
-      id: '0002',
-      name: 'Depósitos a plazo'
-    },
-    {
-      id: '0003',
-      name: 'Depósitos CTS'
-    },
-    {
-      id: '0004',
-      name: 'Depósitos en cuenta corriente'
-    },
-    {
-      id: '0005',
-      name: 'Fondo seguro de depósito'
-    }
-  ]
   return (
     <View style={styles.container}>
-      <Button title="Mostrar Modal" onPress={() => setModalVisible(true)} />
       
       <FlatList 
-        data={dataAll}
+        data={dataitems}
         ItemSeparatorComponent={() => <View style={styles.itemSeparator} />}
         renderItem={({ item }) => (
-          <View key={item.id} style={styles.item}>
+          <Pressable key={item.id} style={styles.item} onPress={() => openInfo(item)}>
             <View>
               <Text style={styles.itemTitle}>
                 {item.name}</Text>
@@ -45,7 +23,7 @@ export default function ItemList({ setModalVisible }) {
               source= {require('./../assets/arrow.png')}
               style={styles.arrowIcon}
             />
-          </View>
+          </Pressable>
         )}
       />
     </View>
@@ -81,3 +59,4 @@ const styles = StyleSheet.create({
   }
 });
 
+export default ItemList
