@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const useItems = () => {
-  const [items, setItems] = useState(null)
+  const [items, setItems] = useState([])
 
   const getItems = async () => {
     try {
