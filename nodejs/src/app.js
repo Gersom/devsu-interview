@@ -2,6 +2,7 @@ const express = require("express")
 const middlewares = require("./config/middlewares")
 const listen = require("./config/listen")
 const { dbConnect } = require("./config/dbConnect")
+const insertData = require("./services/index")
 
 const app = express()
 
@@ -23,4 +24,5 @@ app.use((_, res) => {
 listen(app, () => {
   // Database conexion
   dbConnect()
+  insertData()
 })

@@ -43,6 +43,12 @@ ItemsScheme.static('updateData', (_id, body) => {
 ItemsScheme.static('removeData', (_id) => {
   return ItemsModel.deleteOne({ _id })
 })
+ItemsScheme.static('dataExist', (_id) => {
+  return ItemsModel.exists({})
+})
+ItemsScheme.static('createMany', (data = []) => {
+  return ItemsModel.insertMany(data)
+})
 
 const ItemsModel = mongoose.model(name, ItemsScheme)
 

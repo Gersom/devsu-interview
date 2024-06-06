@@ -1,5 +1,5 @@
-const { ItemsModel } = require("../../models/index")
-const itemsData = require("../../data/items.json")
+const { ItemsModel } = require("./../models/index")
+const itemsData = require("./../data/items.json")
 const insertRecords = require("./insertRecords")
 
 const insertCountries = async () => {
