@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Depósitós de ahorro",
+    "description": "Depósito efectuado en una institución financiera por un plazo indefinido. Los fondos depositados pueden ser incrementados con aportes parciales y tambien pueden ser retirados parcialmente por el cliente sin necesidad de un aviso previo",
+    "logo": "",
+    "dateRelease": "03/05/2024",
+    "dateRevision": "03/05/2024"
+  },
+  {
+    "name": "Depósitos a plazo",
+    "description": "Depósito efectuado en una institución financiera por un monto, plazo y tasa de interés convenido. Son cuentas que le pagan un mayor interés a los ahorristas a cambio de que el dinero que se deposita permanezca por un periodo determinado sin ser retirado",
+    "logo": "",
+    "dateRelease": "03/05/2024",
+    "dateRevision": "03/05/2024"
+  },
+  {
+    "name": "Depósitos CTS",
+    "description": "Depósito a plazo que tiene como propósito fundamental prever el riesgo que origina el cese de una relación laboral y la consecuente pérdida de ingresos en la vida de una persona y su familia",
+    "logo": "",
+    "dateRelease": "03/05/2024",
+    "dateRevision": "03/05/2024"
+  },
+  {
+    "name": "Depósitos en cuenta corriente",
+    "description": "Depósito realizado en un banco, a nombre de una o más personas, que permite a los titulares de la cuenta retirar el dinero mediante el firo de chques con cargo a fondos depositados en la misma y hacer depósitos parciales en dicha cuenta",
+    "logo": "",
+    "dateRelease": "03/05/2024",
+    "dateRevision": "03/05/2024"
+  },
+  {
+    "name": "Fondo seguro de depósito",
+    "description": "Persona jurídica de derechoprivado de naturaleza especial, cutyo objetivo es proteger el ahorro de la personas naturales y jurídicas privadas sin fines de lucro, del riesgo de la eventual insolvencia y liquidación",
+    "logo": "",
+    "dateRelease": "03/05/2024",
+    "dateRevision": "03/05/2024"
+  }
+]
